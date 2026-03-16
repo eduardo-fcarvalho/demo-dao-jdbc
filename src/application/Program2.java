@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -16,6 +17,10 @@ public class Program2 {
 		IO.println("=== TEST 1: department findById ===");
 		Department department = departmentDao.findById(1);
 		IO.println(department);
+		
+		IO.println("\n=== TEST 2: department findByAll ===");
+		List<Department> list = departmentDao.findAll();
+		list.forEach(IO::println);
 		
 		sc.close();
 	}
