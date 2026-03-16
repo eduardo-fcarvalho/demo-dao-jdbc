@@ -28,6 +28,11 @@ public class Program2 {
 		IO.println("Inserted! New id = " + newDep.getId());
 		IO.println(newDep);
 		
+		IO.println("\n=== TEST 4: department update ===");
+		department = departmentDao.findById(1);
+		department.setName("Art");
+		departmentDao.update(department);
+		IO.println("Update completed");
 		
 		sc.close();
 	}
